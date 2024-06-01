@@ -22,14 +22,14 @@
                 </div>
 
 
-               
+
 
 
 
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header flex-row">
-                            <h4 class="card-title">All  Bookings </h4>
+                            <h4 class="card-title">User  Bookings </h4>
                         </div>
                         <div class="card-body bs-0 bg-transparent p-0">
                             <div class="bid-table">
