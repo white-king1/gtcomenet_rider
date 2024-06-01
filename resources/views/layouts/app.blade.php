@@ -87,12 +87,13 @@
                             </li>
                         </ul>
                         <div class="header-btn">
-                            <a href="{{route ('register')}}" class="default-btn default-btn--secondary user_reg">
-                                <span>SignUp<i class="fa-solid fa-user"></i></span>
-                            </a>
                             <a href="{{route ('login')}}" class="default-btn riders_reg" data-bs-toggle="modal" data-bs-target="#wallet-option">
                                 <span>Login <i class="fa-solid fa-car"></i></span>
                             </a>
+                            <a href="{{route ('register')}}" class="default-btn default-btn--secondary user_reg">
+                                <span>SignUp<i class="fa-solid fa-user"></i></span>
+                            </a>
+
                         </div>
 
                         <!-- toggle icons -->

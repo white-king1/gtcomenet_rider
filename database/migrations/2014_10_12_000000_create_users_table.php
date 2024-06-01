@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('account_number');
             $table->double('balance')->default('5');
             $table->enum('status', ['approved','restricted','deleted'])->default('approved');
-            $table->enum('usertype',["user", "admin", "master_admin"])->default('user');
+            $table->enum('usertype',["user", "rider", "admin", "master_admin"])->default('user');
             $table->rememberToken();
             $table->timestamps();
         });

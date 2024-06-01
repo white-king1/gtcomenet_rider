@@ -53,34 +53,48 @@ class BookingController extends Controller
             }
         }
 
-        return redirect()->route('confirm.booking',  ['id' => $post_booking->id])->with('flash_message', 'You have successfully Placed an Order..')->with('flash_type', 'alert-success');
+        // $routeUri = '/user/user/booking_confirmtion/'.$post_booking->id;
+        // dd($routeUri);
+
+        return redirect()->route('home')->with('flash_message', 'Booking Successfull..')
+        ->with('flash_type', 'alert-success');;
     }
 
-    // public function confirmBooking($id){
-    //     $post_booking = ArtImage::with('booking')->where('item_id', $id)->get();
+    public function viewBookings(){
+
+         $all_bookings = Booking::latest()->get();
+
+
+        return view('user.view_bookings', compact('all_bookings'));
+    }
+
+    public function justDelivered($id)
+    {
+        $post_booking = Booking::find($id);
+
+        if (!$post_booking) {
+            return redirect()->route('home')->with('error', 'Booking record not found.');
+        }
+
+        if ($post_booking->status == 'pending') {
+
+            $post_booking->status = 'delivered';
+            $post_booking->save();
+
+        }
+
+        return redirect()->route('view.bookings')->with('flash_message', 'Booking Delivered, Item(s) Delivered..')
+        ->with('flash_type', 'alert-success');
+    }
 
 
 
-
-
-    //     return view('user.confirm_booking', compact('post_booking', 'id'));
-
-    // }
-
-//     public function confirmBooking($id, ArtImage $artImage)
-// {
-//     $post_booking = $artImage->with('booking')->where('item_id', $id)->get();
-
-//     if ($post_booking->isEmpty()) {
-//         return redirect()->back()->with('error', 'No booking found for this item.');
-//     }
-
-//     return view('user.confirm_booking', compact('post_booking', 'id'));
-// }
 
 public function confirmBooking($id)
 {
     $post_booking = ArtImage::with('booking')->where('item_id', $id)->get();
+
+
     // dd($post_booking);
 
 
@@ -92,6 +106,8 @@ public function confirmBooking($id)
 
 
     return view('user.confirm_booking', compact('post_booking', 'id'));
+
+    // return redirect()->to($routeUri);
 }
 
 

@@ -121,24 +121,21 @@
                                             </div>
                                         </div>
 
-                                        <a class="dropdown-item" href="">
-                                            <span><i class="ri-wallet-line"></i></span>Wallet
-                                        </a>
+
                                         <a class="dropdown-item" href="{{route ('users.booking')}}">
-                                            <span><i class="ri-heart-line"></i></span>
+                                            <span><i class="ri-briefcase-line"></i></span>
+
                                             Booking
                                         </a>
-                                        <a class="dropdown-item" href="">
-                                            <span><i class="ri-briefcase-line"></i></span>
-                                            Withdrawal
+                                        <a class="dropdown-item" href="{{route('view.bookings')}}">
+                                            <span><i class="ri-heart-line"></i></span>
+
+                                            Rider View Bookings
                                         </a>
-                                        <a class="dropdown-item" href="">
-                                            <span><i class="ri-briefcase-line"></i></span>
-                                            Deposit
-                                        </a>
+
                                         <a class="dropdown-item" href="">
                                             <span><i class="ri-star-line"></i></span>
-                                            Collection
+                                            Rating
                                         </a>
                                         {{-- <a class="dropdown-item" href="profile.html">
                                             <span><i class="ri-user-line"></i></span>Profile
@@ -179,33 +176,25 @@
                             <span class="nav-text">Dashboard</span>
                         </a>
                     </li> --}}
-                    <li class="">
-                        <a href="">
-                            <span><i class="ri-wallet-line"></i></span>
-                            <span class="nav-text">Wallet</span></a>
-                    </li>
+
                     <li class="">
                         <a href="{{route ('users.booking')}}">
-                            <span><i class="ri-heart-line"></i></span>
+                            <span><i class="ri-briefcase-line"></i></span>
+
                             <span class="nav-text">Booking</span></a>
                     </li>
                     <li class="">
-                        <a href="">
-                            <span><i class="ri-briefcase-line"></i></span>
+                        <a href="{{route('view.bookings')}}">
+                            <span><i class="ri-heart-line"></i></span>
 
-                            <span class="nav-text">Withdrawal</span>
+                            <span class="nav-text">Rider View Bookings</span>
                         </a>
                     </li>
-                    <li class="">
-                        <a href="">
-                            <span><i class="ri-briefcase-line"></i></span>
-                            <span class="nav-text">Deposit</span>
-                        </a>
-                    </li>
+
                     <li class="">
                         <a href="">
                             <span><i class="ri-star-line"></i></span>
-                            <span class="nav-text">Collection</span></a>
+                            <span class="nav-text">Rating</span></a>
                     </li>
 
                     {{-- <li class="">

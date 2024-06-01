@@ -10,26 +10,11 @@
     <div class="content-body">
         <div class="container">
             <div class="row">
-                <div class="col-xxl-6">
-                    <div class="promotion d-flex justify-content-between align-items-center">
-                        <div class="promotion-detail">
-                            <h3 class="text-white mb-3">Welcome, {{ Auth::user()->name }} <br> to Gtcomnet Rider Dashboard
-                            </h3>
-                            <p>Book your Dispatch Rides at an Afordable Rate</p><a class="btn btn-primary me-3">Explore</a><a
-                                class="btn btn-secondary">Create</a>
-                        </div>
-                    </div>
-                </div>
-
-
-               
-
-
 
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header flex-row">
-                            <h4 class="card-title">All  Bookings </h4>
+                            <h4 class="card-title">View  Bookings As a Rider and Accept when delivered </h4>
                         </div>
                         <div class="card-body bs-0 bg-transparent p-0">
                             <div class="bid-table">
@@ -51,7 +36,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($userb as $post_booking)
+                                            @foreach ($all_bookings as $post_booking)
                                                 <tr>
                                                     <td>
                                                         <div class="form-check"><input type="checkbox"
@@ -80,11 +65,11 @@
 
 
                                                     <td>
-                                                        <form action="{{ route('just.recieved', $post_booking->id) }}"
+                                                        <form action="{{ route('just.delivered', $post_booking->id) }}"
                                                             method="POST">@csrf
 
 
-                                                            @if ($post_booking->status != 'completed')
+                                                            @if ($post_booking->status != 'delivered')
                                                                 Click if=> <button class="btn btn-success"
                                                                     type="submit">Accept</button>
                                                             @endif

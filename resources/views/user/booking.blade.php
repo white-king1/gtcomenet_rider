@@ -6,7 +6,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-6">
                     <div class="page-title-content">
-                        <h3>Mke Your Booking</h3>
+                        <h3>Start Your Booking</h3>
                     </div>
                     @if (Session::has('flash_message'))
                     <center>
@@ -26,9 +26,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Upload Your Arts for Minting</h4>
-                    </div>
+
                     <div class="card-body">
                         <form  method="POST" action="{{ route('post.booking')}}" enctype="multipart/form-data">
                             @csrf
