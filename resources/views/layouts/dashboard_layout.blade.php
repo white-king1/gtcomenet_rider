@@ -133,7 +133,7 @@
                                             Rider View Bookings
                                         </a>
 
-                                        <a class="dropdown-item" href="">
+                                        <a class="dropdown-item" href="{{route('riders.index')}}">
                                             <span><i class="ri-star-line"></i></span>
                                             Rating
                                         </a>
@@ -192,7 +192,7 @@
                     </li>
 
                     <li class="">
-                        <a href="">
+                        <a href="{{route('riders.index')}}">
                             <span><i class="ri-star-line"></i></span>
                             <span class="nav-text">Rating</span></a>
                     </li>

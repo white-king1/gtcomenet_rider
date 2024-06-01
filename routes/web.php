@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RidersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,7 +36,13 @@ Route::middleware(['auth'])->prefix('user')->group(function () {
     Route::post('/just_recieved/{id}', 'HomeController@justReceived')->name('just.recieved');
     Route::post('/just_delivered/{id}', 'BookingController@justDelivered')->name('just.delivered');
     Route::get('/view_bookings', 'BookingController@viewBookings')->name('view.bookings');
+    Route::get('/riders', 'RidersController@rideNow')->name('riders.index');
 
+
+    Route::get('/riders/{id}', 'RidersController@show')->name('riders.show');
+
+    
+    Route::post('/riders/{id}/ratings', 'RatingsController@store')->name('ratings.store');
 
 
 
