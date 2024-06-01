@@ -31,7 +31,8 @@ Route::middleware(['auth'])->prefix('user')->group(function () {
     Route::get('/', 'DashboardController@index')->name('user.dashboard');
     Route::get('/booking', 'BookingController@userBooking')->name('users.booking');
     Route::post('/post_booking', 'BookingController@postBooking')->name('post.booking');
-    Route::get('/booking_confirmtion/{id}', 'BookingController@confirmBooking')->name('confirm.booking');
+    Route::get('/user/booking_confirmtion/{id}', 'BookingController@confirmBooking')->name('confirm.booking');
+
 
 
 

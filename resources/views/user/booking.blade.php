@@ -8,6 +8,13 @@
                     <div class="page-title-content">
                         <h3>Mke Your Booking</h3>
                     </div>
+                    @if (Session::has('flash_message'))
+                    <center>
+                        <div class="alert {{ Session::get('flash_type') }} col-md-4">
+                            <h6>{{ Session::get('flash_message') }}</h6>
+                        </div>
+                    </center>
+                @endif
                 </div>
                 <div class="col-auto">
                     <div class="breadcrumbs"><a href="{{route('user.dashboard')}}">Home </a><span><i
@@ -74,6 +81,7 @@
 
 
                                         </div>
+
                                         <center>
                                             {{-- <div class="col-3">
                                                 <label class="w-100" for="images">Display Image</label>
@@ -98,10 +106,10 @@
                                 <div class="col-md-4 mb-4"><label class="form-label">Qauntity</label><input
                                         name="quantity" type="text" class="form-control" value="">
                                 </div>
-                                {{-- <div class="col-md-4 mb-4">
-                                    <label class="form-label">Artist Name</label><input
-                                        name="artist_name" type="text" class="form-control" value="">
-                                </div> --}}
+                                <div class="col-md-4 mb-4">
+                                    <label class="form-label">Location</label><input
+                                        name="location" type="text" class="form-control" value="">
+                                </div>
 
                             </div>
 

@@ -15,13 +15,15 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->integer('booker_id');
             $table->string('image')->nullable();
-            $table->string('flw_ref')->nullable();
+            $table->string('location')->nullable();
             $table->string('item_description');
             $table->integer('quantity');
             $table->enum('status', ['pending', 'delivered', 'completed', 'cancelled',])->default('pending');
             $table->string('rider_id')->nullable();
+            $table->string('booking_id')->nullable();
+
             $table->timestamps();
         });
     }
