@@ -89,7 +89,7 @@
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header flex-row">
-                            <h4 class="card-title">CONVERT REGISTERED USERS TO AN ADMIN OR A RIDER </h4>
+                            <h4 class="card-title">CONVERT REGISTERED USERS TO AN ADMIN OR A RIDER</h4>
                         </div>
                         <div class="card-body bs-0 bg-transparent p-0">
                             <div class="bid-table">
@@ -109,7 +109,6 @@
                                                 <th>Account Balance</th>
                                                 <th>UserType</th>
                                                 <th>status</th>
-                                                <th>Action</th>
                                                 <th>Action</th>
                                                 <th>Action</th>
 
@@ -204,4 +203,6 @@
             </div>
         </div>
     </div>
+
+   
 @endsection

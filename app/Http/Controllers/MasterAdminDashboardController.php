@@ -9,13 +9,13 @@ class MasterAdminDashboardController extends Controller
 {
     public function masterDashboard()
     {
-        return view('admin.master_admin_dashboard');
+        return view ('admin.master_admin_dashboard');
     }
 
     public function allUsers(){
         $userTypes = ['user', 'rider', 'admin'];
 
-        $registeredUsers = User::where('usertype',  $userTypes)->latest()->get();
+        $registeredUsers = User::whereIn('usertype',  $userTypes)->get();
         return view('admin.all_users', compact('registeredUsers'));
     }
 
@@ -57,7 +57,7 @@ class MasterAdminDashboardController extends Controller
         }
 
 
-        return redirect()->route('home')->with('flash_message', 'User Successfully Switched to a Rider..')
+        return redirect()->route('all.users')->with('flash_message', 'User Successfully Switched to a Rider..')
         ->with('flash_type', 'alert-success');
     }
 
@@ -78,7 +78,7 @@ class MasterAdminDashboardController extends Controller
         }
 
 
-        return redirect()->route('home')->with('flash_message', 'User Successfully Switched to an Admin..')
+        return redirect()->route('all.users')->with('flash_message', 'User Successfully Switched to an Admin..')
         ->with('flash_type', 'alert-success');
     }
 

@@ -61,6 +61,7 @@ Route::middleware(['auth'])->prefix('master_admin')->group(function () {
  Route::get('/master_admin_dashboard', 'MasterAdminDashboardController@masterDashboard')->name('master.dashboard');
  Route::get('/all_users', 'MasterAdminDashboardController@allUsers')->name('all.users');
 
+
  Route::post('/switched_to_rider/{id}', 'MasterAdminDashboardController@switchRider')->name('switch.rider');
  Route::post('/switched_to_admin/{id}', 'MasterAdminDashboardController@switchAdmin')->name('switch.admin');
  Route::get('/delete_users/{id}', 'MasterAdminDashboardController@deleteUsers')->name('delete.users');
