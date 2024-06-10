@@ -110,6 +110,12 @@ public function confirmBooking($id)
     // return redirect()->to($routeUri);
 }
 
+public function viewUserBookings(){
+    $viewUserB = Booking::where('booker_id', Auth::user()->id)->latest()->get(); //Only orders that have the user id as the auth user id
+
+    return view('user.view_user_bookings', compact('viewUserB'));
+}
+
 
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.rider_dashboard_layouts')
+@extends('layouts.dashboard_layout')
 @section('content')
     @if (Session::has('flash_message'))
         <center>
@@ -10,11 +10,10 @@
     <div class="content-body">
         <div class="container">
             <div class="row">
-
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header flex-row">
-                            <h4 class="card-title">View  Bookings As a Rider and Accept to delivered Items </h4>
+                            <h4 class="card-title">User  Bookings </h4>
                         </div>
                         <div class="card-body bs-0 bg-transparent p-0">
                             <div class="bid-table">
@@ -36,7 +35,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($all_bookings as $post_booking)
+                                            @foreach ($viewUserB as $post_booking)
                                                 <tr>
                                                     <td>
                                                         <div class="form-check"><input type="checkbox"
@@ -65,11 +64,11 @@
 
 
                                                     <td>
-                                                        <form action="{{ route('just.delivered', $post_booking->id) }}"
+                                                        <form action="{{ route('just.recieved', $post_booking->id) }}"
                                                             method="POST">@csrf
 
 
-                                                            @if ($post_booking->status != 'delivered')
+                                                            @if ($post_booking->status != 'completed')
                                                                 Click if=> <button class="btn btn-success"
                                                                     type="submit">Accept</button>
                                                             @endif

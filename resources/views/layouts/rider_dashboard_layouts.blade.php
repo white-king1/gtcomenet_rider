@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!---- Website Information ---->
-    <title>My Dashboard</title>
+    <title>Rider Dashboard</title>
     <meta name="description"
         content="ENFTX is the complete UX & UI dashboard for NFT. Here included bids, collection, wallet, and all user setting pages including profile, application, activity, payment method, api, sign in & sign up etc.">
 
@@ -122,23 +122,23 @@
                                         </div>
 
 
-                                        <a class="dropdown-item" href="{{route ('users.booking')}}">
+                                        {{-- <a class="dropdown-item" href="{{route ('users.booking')}}">
                                             <span><i class="ri-briefcase-line"></i></span>
 
                                             Booking
-                                        </a>
-                                        <a class="dropdown-item" href="{{route('view.userbookings')}}">
+                                        </a> --}}
+                                        {{-- <a class="dropdown-item" href="{{route('view.userbookings')}}">
                                             <span><i class="ri-user-line"></i></span>
 
                                             User  Bookings
-                                        </a>
-                                        {{-- <a class="dropdown-item" href="{{route('view.bookings')}}">
+                                        </a> --}}
+                                        <a class="dropdown-item" href="{{route('view.bookings')}}">
                                             <span><i class="ri-car-line"></i></span>
 
                                             Rider  Bookings
-                                        </a> --}}
+                                        </a>
 
-                                        <a class="dropdown-item" href="{{route('riders.index')}}">
+                                        <a class="dropdown-item" href="">
                                             <span><i class="ri-star-line"></i></span>
                                             Rating
                                         </a>
@@ -182,29 +182,29 @@
                         </a>
                     </li> --}}
 
-                    <li class="">
+                    {{-- <li class="">
                         <a href="{{route ('users.booking')}}">
                             <span><i class="ri-briefcase-line"></i></span>
 
                             <span class="nav-text">Booking</span></a>
-                    </li>
-                    <li class="">
+                    </li> --}}
+                    {{-- <li class="">
                         <a href="{{route('view.userbookings')}}">
                             <span><i class="ri-user-line"></i></span>
 
                             <span class="nav-text">User Bookings</span>
                         </a>
-                    </li>
-                    {{-- <li class="">
+                    </li> --}}
+                    <li class="">
                         <a href="{{route('view.bookings')}}">
                             <span><i class="ri-car-line"></i></span>
 
                             <span class="nav-text">Rider Bookings</span>
                         </a>
-                    </li> --}}
+                    </li>
 
                     <li class="">
-                        <a href="{{route('riders.index')}}">
+                        <a href="">
                             <span><i class="ri-star-line"></i></span>
                             <span class="nav-text">Rating</span></a>
                     </li>

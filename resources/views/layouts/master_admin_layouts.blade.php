@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!---- Website Information ---->
-    <title>My Dashboard</title>
+    <title>Master Admin Dashboard</title>
     <meta name="description"
         content="ENFTX is the complete UX & UI dashboard for NFT. Here included bids, collection, wallet, and all user setting pages including profile, application, activity, payment method, api, sign in & sign up etc.">
 
@@ -33,7 +33,7 @@
                     <div class="col-xxl-12">
                         <div class="header-content">
                             <div class="header-left">
-                                <div class="brand-logo"><a class="mini-logo" href="{{route ('user.dashboard')}}"><img
+                                <div class="brand-logo"><a class="mini-logo" href="{{route ('master.dashboard')}}"><img
                                             src="/assets_dashboard/images/logoi.png" alt="" width="40"></a>
                                 </div>
                                 <div class="search">
@@ -96,7 +96,6 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="#">More<i class="ri-arrow-right-s-line"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -120,28 +119,32 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <a class="dropdown-item" href="{{route('all.users')}}">
+                                            <span><i class="ri-user-line"></i></span>
 
+                                            Registered Users
+                                        </a>
 
-                                        <a class="dropdown-item" href="{{route ('users.booking')}}">
+                                        <a class="dropdown-item" href="">
                                             <span><i class="ri-briefcase-line"></i></span>
 
-                                            Booking
+                                            Bookings
                                         </a>
-                                        <a class="dropdown-item" href="{{route('view.userbookings')}}">
+                                        {{-- <a class="dropdown-item" href="">
                                             <span><i class="ri-user-line"></i></span>
 
                                             User  Bookings
                                         </a>
-                                        {{-- <a class="dropdown-item" href="{{route('view.bookings')}}">
+                                        <a class="dropdown-item" href="">
                                             <span><i class="ri-car-line"></i></span>
 
                                             Rider  Bookings
                                         </a> --}}
 
-                                        <a class="dropdown-item" href="{{route('riders.index')}}">
+                                        {{-- <a class="dropdown-item" href="">
                                             <span><i class="ri-star-line"></i></span>
                                             Rating
-                                        </a>
+                                        </a> --}}
                                         {{-- <a class="dropdown-item" href="profile.html">
                                             <span><i class="ri-user-line"></i></span>Profile
                                         </a> --}}
@@ -181,33 +184,40 @@
                             <span class="nav-text">Dashboard</span>
                         </a>
                     </li> --}}
+                    <li class="">
+                        <a href="{{route('all.users')}}">
+                            <span><i class="ri-user-line"></i></span>
+
+                            <span class="nav-text">Registered Users</span>
+                        </a>
+                    </li>
 
                     <li class="">
-                        <a href="{{route ('users.booking')}}">
+                        <a href="">
                             <span><i class="ri-briefcase-line"></i></span>
 
-                            <span class="nav-text">Booking</span></a>
+                            <span class="nav-text">Bookings</span></a>
                     </li>
-                    <li class="">
-                        <a href="{{route('view.userbookings')}}">
+                    {{-- <li class="">
+                        <a href="">
                             <span><i class="ri-user-line"></i></span>
 
                             <span class="nav-text">User Bookings</span>
                         </a>
                     </li>
-                    {{-- <li class="">
-                        <a href="{{route('view.bookings')}}">
+                    <li class="">
+                        <a href="">
                             <span><i class="ri-car-line"></i></span>
 
                             <span class="nav-text">Rider Bookings</span>
                         </a>
                     </li> --}}
 
-                    <li class="">
-                        <a href="{{route('riders.index')}}">
+                    {{-- <li class="">
+                        <a href="">
                             <span><i class="ri-star-line"></i></span>
                             <span class="nav-text">Rating</span></a>
-                    </li>
+                    </li> --}}
 
                     {{-- <li class="">
                         <a href="profile.html">

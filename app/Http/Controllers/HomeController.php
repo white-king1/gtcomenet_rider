@@ -32,8 +32,11 @@ class HomeController extends Controller
         if(Auth::user()->usertype == 'admin'){
           return redirect()->route('admin');
         }elseif(Auth::user()->usertype == 'master_admin'){
-            return redirect()->route('master_admin');
-        } else{
+            return redirect()->route('master.dashboard');
+        }elseif(Auth::user()->usertype == 'rider'){
+            return redirect()->route('rider.dashboard');
+
+        }else{
         return view('user.dashboard', compact('userb','riderb',));
     }
     }
